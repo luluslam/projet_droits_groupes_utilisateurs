@@ -1,88 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Résumé du projet</title>
-  <link rel="stylesheet" href="resumeProjet.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Résumé du projet AD - Luna MEHDI</title>
+  <link rel="stylesheet" href="style-projet.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🔐 Projet : Gestion des droits Active Directory via interface Web</h1>
+    <header class="hero">
+      <h1>Projet Active Directory — <span class="accent">Luna MEHDI</span></h1>
+      <p class="subtitle">Exploration et gestion des utilisateurs, groupes et OU via un portail web <strong>connecté à PowerShell</strong>.</p>
+      <div class="button-group">
+        <a href="#" class="btn">Fonctionnalités</a>
+        <a href="#" class="btn">Structure</a>
+        <a href="#" class="btn">Scripts</a>
+      </div>
+    </header>
 
-    <section>
-      <h2>🎯 Objectif</h2>
+    <section class="section">
+      <h2>📋 Présentation du projet</h2>
       <p>
-        Créer une interface web sécurisée permettant de rechercher des utilisateurs et des groupes dans l’Active Directory du domaine <strong>ATE</strong> (et autres), avec exportation automatique des résultats en CSV et affichage structuré des informations.
+        Ce projet a été développé dans le cadre de ma formation <strong>BTS SIO SLAM</strong>.<br />
+        Il permet l’interaction en temps réel avec l’Active Directory à travers une interface web :
       </p>
-    </section>
-
-    <section>
-      <h2>⚙️ Technologies utilisées</h2>
       <ul>
-        <li><strong>PowerShell</strong> — Scripts pour interagir avec Active Directory</li>
-        <li><strong>PHP</strong> — Exécution des scripts et redirection</li>
-        <li><strong>HTML/CSS</strong> — Interface web (formulaires, tableaux dynamiques)</li>
-        <li><strong>JavaScript</strong> — Chargement et affichage dynamique des résultats CSV</li>
-        <li><strong>WAMP</strong> — Serveur local (Apache, PHP, MySQL)</li>
+        <li>🔎 Recherche d’utilisateurs dans tout le domaine ou dans une OU précise</li>
+        <li>🧑‍🤝‍🧑 Affichage des groupes et des membres</li>
+        <li>📂 Visualisation dynamique des sous-OU</li>
+        <li>📊 Export CSV automatique des résultats</li>
+        <li>⚙️ Détails d’un compte : activité, dernière connexion, changement de mot de passe</li>
       </ul>
     </section>
 
-    <section>
-      <h2>📂 Fonctionnalités principales</h2>
+    <section class="section">
+      <h2>🧱 Architecture</h2>
       <ul>
-        <li>🔍 Recherche d’un <strong>utilisateur</strong> dans une OU spécifique ou dans tout le domaine</li>
-        <li>🔐 Affichage des <strong>groupes associés</strong> à un utilisateur</li>
-        <li>📁 Recherche d’un <strong>groupe</strong> et affichage des membres</li>
-        <li>📤 Export automatique des résultats en <strong>fichiers CSV</strong></li>
-        <li>📊 Affichage des <strong>détails de l’utilisateur</strong> : statut, dernière connexion, date de modification du mot de passe</li>
-        <li>📜 Interface claire avec <strong>filtrage en temps réel</strong></li>
+        <li><strong>Frontend :</strong> HTML / CSS</li>
+        <li><strong>Backend :</strong> PHP + PowerShell</li>
+        <li><strong>Serveur :</strong> WAMP (hébergé sur VM)</li>
+        <li><strong>Domaine :</strong> `ate.at.int` / `pref45.int`</li>
       </ul>
     </section>
 
-    <section>
-      <h2>🏗️ Arborescence du projet</h2>
-      <pre><code>
-projet_droits_groupes_utilisateurs/
-├── html/
-│   ├── index.html
-│   ├── rechercher/
-│   ├── resultat/
-│   └── details/
-├── php/
-│   ├── utilisateurs/
-│   ├── groupes/
-│   └── details/
-├── ps1/
-│   ├── utilisateurs/
-│   ├── groupes/
-│   └── details/
-├── data/
-└── css/
-    └── style.css
-      </code></pre>
+    <section class="section">
+      <h2>📦 Exemple de technologies utilisées</h2>
+      <div class="tech-tags">
+        <span>PowerShell</span>
+        <span>Active Directory</span>
+        <span>WAMP</span>
+        <span>CSV</span>
+        <span>HTML/CSS</span>
+        <span>PHP</span>
+        <span>Windows Server</span>
+        <span>OU / Groupes</span>
+      </div>
     </section>
-
-    <section>
-      <h2>📌 Exemple de cas d’usage</h2>
-      <p>
-        Un administrateur souhaite vérifier les groupes d’un utilisateur dans l’OU <strong>DDI45</strong>. Il entre son nom dans le formulaire web, ce qui déclenche un script PowerShell. Le résultat s’affiche en tableau avec tous les groupes liés et un bouton permet d’accéder aux détails (compte actif, dernières connexions...).
-      </p>
-    </section>
-
-    <section>
-      <h2>🧠 Compétences mobilisées</h2>
-      <ul>
-        <li>Administration Active Directory</li>
-        <li>Scripting PowerShell</li>
-        <li>Communication entre PHP et PowerShell</li>
-        <li>Affichage dynamique en HTML/JS</li>
-        <li>Structure de projet modulaire</li>
-      </ul>
-    </section>
-
-    <footer>
-      <p><em>Réalisé par Luna MEHDI - BTS SIO SISR</em></p>
-    </footer>
   </div>
 </body>
 </html>
